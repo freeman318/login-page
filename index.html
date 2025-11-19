@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Votre Nom] - Portfolio | Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="terminal-container">
+        <header class="terminal-header">
+            <span class="terminal-title">CMD: /user/guest/portfolio</span>
+        </header>
+        
+        <div class="terminal-body">
+            
+            <section id="hero" class="terminal-section active" data-command="home">
+                <p class="prompt">PS C:\Users\Visitor> run --startup</p>
+                <div class="typewriter-text" data-text="ACCÈS GRANTED. Bienvenue sur le portfolio de [Votre Nom]."></div>
+                <div class="neon-glow hero-name">LASANTSY Fidinirina Jacquelio</div>
+                <p class="hero-tagline">// Étudiant L3 Informatique | Développeur Web Front-end & PHP/MySQL en herbe</p>
+                <p class="prompt blink">$ tapez 'help' pour la liste des commandes</p>
+            </section>
+            
+            <section id="about" class="terminal-section" data-command="about">
+                <p class="prompt">$ cat about.txt</p>
+                <h3>> À Propos de Moi</h3><br>
+                <p>Homme/21ans/habite a mahajanga</p>
+                <p>Étudiant en Licence 3 Informatique, je suis un futur développeur web avide de construire des applications solides et efficaces. Actuellement, je me concentre sur l'acquisition d'une base technique inébranlable en développement web frontal (HTML5, CSS3, JavaScript) et sur les fondamentaux du développement back-end avec PHP et l'administration de bases de données MySQL. Mon objectif est d'appliquer les principes d'algorithmique et de sécurité étudiés pour créer des solutions web non seulement fonctionnelles, mais également optimisées et fiables. Je suis à l'étape où la théorie rencontre la pratique, prêt à hacker des projets et à explorer les prochaines technologies du marché.</p>
+            </section>
+            
+        
+            
+            <section id="contact" class="terminal-section" data-command="contact">
+                <p class="prompt">$ whois [Votre Nom]</p>
+                <h3>> Contactez-moi</h3>
+                <p>Email: <span class="neon-link" data-link="mailto:votre.email@exemple.com">fidinirinakeyman@gmail.com</span></p>
+                <p>Téléphone: <span class="neon-link" data-link="Votre_Lien_LinkedIn">+261329608396</span></p>
+                <p>Facebook: <span class="neon-link" data-link="Votre_Lien_GitHub">Keyman SK</span></p>
+            </section>
+            
+            <section id="help" class="terminal-section" data-command="help">
+                <p class="prompt">$ help</p>
+                <h3>> Commandes Disponibles</h3>
+                <ul class="command-list">
+                    <li><span class="command-word">home</span> : Retour à l'écran d'accueil.</li>
+                    <li><span class="command-word">about</span> : En savoir plus sur moi.</li>
+                    <li><span class="command-word">contact</span> : Mes informations de contact.</li>
+                    <li><span class="command-word">clear</span> : Efface l'écran du terminal.</li>
+                </ul>
+            </section>
+
+            <div class="terminal-input-area">
+                <p class="prompt">$ <input type="text" id="terminal-input" autocomplete="off" autofocus></p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

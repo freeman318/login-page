@@ -1,0 +1,151 @@
+/* Variables pour les couleurs néon */
+:root {
+    --color-primary: #00FFFF; /* Cyan Néon */
+    --color-secondary: #00FF00; /* Vert Néon */
+    --color-background: #111; /* Fond très sombre */
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-secondary); /* Texte par défaut vert */
+    font-family: var(--font-mono);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Conteneur principal du terminal */
+.terminal-container {
+    width: 90%;
+    max-width: 1000px;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 20px rgba(0, 255, 255, 0.2);
+    background-color: #030303; /* Intérieur encore plus sombre */
+    padding: 10px;
+    max-height: 80vh;
+    overflow-y: auto; /* Permet le défilement si le contenu est trop grand */
+}
+
+/* Barre de titre du terminal */
+.terminal-header {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 5px 10px;
+    margin: -10px -10px 10px -10px; /* Colle au bord */
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Effet de lueur Néon */
+.neon-glow {
+    color: var(--color-primary);
+    text-shadow: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary), 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+.hero-name {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.hero-tagline {
+    font-size: 1.2em;
+    color: #AAA; /* Gris */
+    margin-top: 0;
+}
+
+/* Prompt du terminal */
+.prompt {
+    color: var(--color-secondary);
+    margin: 10px 0;
+}
+
+/* Effet de clignotement pour le curseur */
+.blink::after {
+    content: '_';
+    animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { color: transparent }
+    50% { color: var(--color-secondary) }
+}
+
+/* Sections */
+.terminal-section {
+    display: none;
+    padding: 10px 0;
+    border-top: 1px dashed rgba(0, 255, 0, 0.3);
+    margin-top: 10px;
+}
+
+.terminal-section.active {
+    display: block;
+}
+
+/* Liens et mots-clés interactifs */
+.neon-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease;
+}
+
+.neon-link:hover {
+    text-shadow: 0 0 5px var(--color-primary), 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+.command-word {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Zone d'entrée de commande */
+.terminal-input-area {
+    margin-top: 20px;
+}
+
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: 16px;
+    width: calc(100% - 30px); /* Ajuster la taille */
+    outline: none; /* Enlever l'outline par défaut */
+    caret-color: var(--color-primary); /* Couleur du curseur */
+}
+
+/* Style de la liste des projets */
+.project-list li {
+    list-style: none;
+    padding: 5px 0;
+}
+.project-list li::before {
+    content: "=> ";
+    color: var(--color-primary);
+}
+
+/* Effet d'écriture pour l'accueil (Typewriter) */
+.typewriter-text {
+    overflow: hidden; /* Cache le contenu avant l'animation */
+    white-space: nowrap; /* Assure que le texte reste sur une seule ligne */
+    letter-spacing: .10em; /* Espace entre les lettres pour l'effet */
+    animation: typing 4s steps(50, end) forwards;
+    width: 0; /* Commence avec une largeur nulle */
+    color: var(--color-primary);
+    font-weight: bold;
+    border-right: .15em solid var(--color-primary); /* Simule le curseur */
+}
+
+/* L'animation de l'écriture */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
